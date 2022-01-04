@@ -97,5 +97,4 @@ sw.*
 
 # custom
 storybook-static
-.nuxt-storybook
 .slicemachine

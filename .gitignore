@@ -94,3 +94,8 @@ sw.*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# custom
+storybook-static
+.nuxt-storybook
+.slicemachine

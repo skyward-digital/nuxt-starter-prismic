@@ -1,0 +1,39 @@
+{
+  "id": "homepage",
+  "label": "Homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "config": {
+          "label": "Title",
+          "placeholder": "Welcome to my Nuxt/Prismic website!",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        },
+        "type": "StructuredText"
+      },
+      "description": {
+        "config": {
+          "label": "Description",
+          "placeholder": "This is where it all begins...",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading2,heading3,heading4,heading5,heading6,strong,em,list-item,o-list-item,image,hyperlink"
+        },
+        "type": "StructuredText"
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "text_slice": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

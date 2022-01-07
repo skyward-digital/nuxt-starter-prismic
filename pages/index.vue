@@ -9,26 +9,26 @@
 </template>
 
 <script>
-import SliceZone from 'vue-slicezone'
+import SliceZone from "vue-slicezone";
 
 export default {
-  name: 'IndexPage',
+  name: "IndexPage",
   components: {
     SliceZone,
   },
   async asyncData({ $prismic, error }) {
-    const document = await $prismic.api.getSingle('homepage')
+    const document = await $prismic.api.getSingle("homepage");
 
     if (document) {
-      return { document }
+      return { document };
     } else {
-      error({ statusCode: 404, message: 'Page not found' })
+      error({ statusCode: 404, message: "Page not found" });
     }
   },
   data() {
     return {
       document: {},
-    }
+    };
   },
-}
+};
 </script>

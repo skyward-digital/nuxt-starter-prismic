@@ -6,15 +6,15 @@
 
 <script>
 export default {
-  name: 'TextSlice',
+  name: "TextSlice",
   props: {
     slice: {
       type: Object,
       required: true,
       default() {
-        return {}
+        return {};
       },
     },
   },
-}
+};
 </script>

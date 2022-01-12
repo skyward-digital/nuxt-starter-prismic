@@ -11,6 +11,9 @@
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+    "lint:check": "eslint '{components,context,pages,slices,utils}/**/*.js'",
+    "format": "prettier --write \"{.slicemachine,.storybook,components,context,customtypes,docs,pages,slices,styles,utils}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md}\"",
+    "format:check": "prettier --check '{.slicemachine,.storybook,components,context,,customtypes,docs,pages,slices,styles,utils}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md}'",
     "sm": "start-slicemachine",
     "storybook": "nuxt storybook",
     "build-storybook": "nuxt storybook build"

@@ -119,7 +119,16 @@
 
 <script>
 export default {
-  name: 'NuxtTutorial',
-  props: ['title', 'description'],
-}
+  name: "NuxtTutorial",
+  props: {
+    title: {
+      type: String,
+      default: "Enter a page title in Prismic",
+    },
+    description: {
+      type: String,
+      default: "Enter a page description in Prismic",
+    },
+  },
+};
 </script>

@@ -1,6 +1,8 @@
+import { defineNuxtConfig } from "@nuxt/bridge";
 import { getStoriesPaths } from "slice-machine-ui/helpers/storybook";
 import smConfig from "./sm.json";
-export default {
+
+export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -89,4 +91,7 @@ export default {
     modern: true,
     linkResolver: "@/plugins/link-resolver",
   },
-};
+  tailwindcss: {
+    viewer: false,
+  },
+});

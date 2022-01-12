@@ -98,3 +98,4 @@ sw.*
 # custom
 storybook-static
 .slicemachine
+.nuxt-storybook

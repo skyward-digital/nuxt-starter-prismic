@@ -1,0 +1,159 @@
+{
+  "default": {
+    "logo": {
+      "dimensions": {
+        "width": 131,
+        "height": 51
+      },
+      "alt": "Skyward logo with wordmark",
+      "copyright": null,
+      "url": "https://skyward.cdn.prismic.io/skyward/0957c1f7-b2fa-4841-a825-497fd7f68213_Skyward-brand-white.svg"
+    },
+    "text": [
+      {
+        "type": "paragraph",
+        "text": "Skyward is a global remote company, headquartered in Bath & Bristol, UK",
+        "spans": []
+      }
+    ],
+    "links": [
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "About"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Services"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Solutions"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Case Studies"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Contact"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Privacy"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Terms"
+      }
+    ],
+    "ctaTitle": [
+      {
+        "type": "heading2",
+        "text": "See if Skyward are the right team to help you (we totally are)",
+        "spans": []
+      }
+    ],
+    "ctaDescription": [
+      {
+        "type": "paragraph",
+        "text": "We’ll talk through your project ideas and figure out the best solution for your needs and how to build that in a way that scales with your growth ",
+        "spans": []
+      }
+    ],
+    "ctaLink": {
+      "link_type": "Web",
+      "url": "https://#"
+    },
+    "ctaLinkLabel": "Let’s talk"
+  },
+  "withoutCTA": {
+    "logo": {
+      "dimensions": {
+        "width": 131,
+        "height": 51
+      },
+      "alt": "Skyward logo with wordmark",
+      "copyright": null,
+      "url": "https://skyward.cdn.prismic.io/skyward/0957c1f7-b2fa-4841-a825-497fd7f68213_Skyward-brand-white.svg"
+    },
+    "text": [
+      {
+        "type": "paragraph",
+        "text": "Skyward is a global remote company, headquartered in Bath & Bristol, UK",
+        "spans": []
+      }
+    ],
+    "links": [
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "About"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Services"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Solutions"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Case Studies"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Contact"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Privacy"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://#"
+        },
+        "linkLabel": "Terms"
+      }
+    ]
+  }
+}

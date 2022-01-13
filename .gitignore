@@ -99,3 +99,4 @@ sw.*
 storybook-static
 .slicemachine
 .nuxt-storybook
+.output

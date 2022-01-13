@@ -53,13 +53,13 @@ export default defineNuxtConfig({
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    ["nuxt-sm"],
     [
       "@nuxtjs/prismic",
       {
         endpoint: smConfig.apiEndpoint || "",
       },
     ],
-    ["nuxt-sm"],
   ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -68,7 +68,7 @@ export default defineNuxtConfig({
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ["vue-slicezone", "nuxt-sm"],
+    transpile: ["vue-slicezone", "nuxt-sm", "sm-commons"],
   },
   storybook: {
     // This is a bug with `getStoriesPaths` and Nuxt that is awaiting to be fixed

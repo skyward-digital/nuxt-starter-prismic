@@ -1,6 +1,7 @@
 {
   "name": "nuxt-starter-prismic",
   "version": "1.0.0",
+  "author": "<skyward-digital>",
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
@@ -16,7 +17,8 @@
     "format:check": "prettier --check '{.slicemachine,.storybook,components,context,,customtypes,docs,pages,slices,styles,utils}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md}'",
     "sm": "start-slicemachine",
     "storybook": "nuxt storybook",
-    "build-storybook": "nuxt storybook build"
+    "build-storybook": "nuxt storybook build",
+    "kill": "kill $(lsof -ti:3000,8888,9999)"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",

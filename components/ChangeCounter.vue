@@ -18,43 +18,30 @@
   </div>
 </template>
 
-<script>
-import { provide, reactive } from '@nuxtjs/composition-api'
-import Counter from './Counter'
+<script setup>
+import Counter from "./Counter";
 
-export default {
-  components: {
-    Counter,
-  },
+// Ref is used to allow the DOM to render live updates on the state, in the case it will be 'count'.
+const count = ref(0);
 
-  setup() {
-    // Reactive is used to allow the DOM to render live updates on the state, in the case it will be 'count'.
-    const count = reactive({
-      value: 0,
-    })
+/**
+ * Provide is used to "provide" a variable to child components,
+ * no matter how deep they are in the hierarchy.
+ *
+ * Since the 'count' variable above is reactive,
+ * it will automatically send changes down to the child components.
+ *
+ * View the 'Counter' child component to see how we 'inject' the variable.
+ */
 
-    /**
-     * Provide is used to "provide" a variable to child components,
-     * no matter how deep they are in the hierarchy.
-     *
-     * Since the 'count' variable above is reactive,
-     * it will automatically send changes down to the child components.
-     *
-     * View the 'Counter' child component to see how we 'inject' the variable.
-     */
+provide("count", count);
 
-    provide('count', count)
+// These two functions are used to manipulate the 'count.value' state.
+const increment = () => {
+  count.value++;
+};
 
-    // These two functions are used to manipulate the 'count.value' state.
-    const increment = () => {
-      count.value++
-    }
-
-    const decrement = () => {
-      count.value--
-    }
-
-    return { count, increment, decrement }
-  },
-}
+const decrement = () => {
+  count.value--;
+};
 </script>

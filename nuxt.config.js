@@ -1,6 +1,8 @@
+import { defineNuxtConfig } from "@nuxt/bridge";
 import { getStoriesPaths } from "slice-machine-ui/helpers/storybook";
 import smConfig from "./sm.json";
-export default {
+
+export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -51,13 +53,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    ["nuxt-sm"],
     [
       "@nuxtjs/prismic",
       {
         endpoint: smConfig.apiEndpoint || "",
       },
     ],
-    ["nuxt-sm"],
   ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -66,7 +68,7 @@ export default {
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ["vue-slicezone", "nuxt-sm"],
+    transpile: ["vue-slicezone", "nuxt-sm", "sm-commons"],
   },
   storybook: {
     // This is a bug with `getStoriesPaths` and Nuxt that is awaiting to be fixed
@@ -89,4 +91,7 @@ export default {
     modern: true,
     linkResolver: "@/plugins/link-resolver",
   },
-};
+  tailwindcss: {
+    viewer: false,
+  },
+});

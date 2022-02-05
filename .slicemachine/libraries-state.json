@@ -1,0 +1,62 @@
+{
+  "slices": {
+    "components": {
+      "text_slice": {
+        "library": "slices",
+        "id": "text_slice",
+        "name": "TextSlice",
+        "description": "TextSlice",
+        "model": {
+          "id": "text_slice",
+          "type": "SharedSlice",
+          "name": "TextSlice",
+          "description": "TextSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TextSlice",
+              "primary": {
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description of your product",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "text_slice",
+            "items": [],
+            "primary": {
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Dolor minim tempor qui ut deserunt sit amet. Magna fugiat Lorem aute ut.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      }
+    }
+  }
+}

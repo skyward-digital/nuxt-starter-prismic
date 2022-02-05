@@ -1,5 +1,4 @@
 import { defineNuxtConfig } from "@nuxt/bridge";
-import { getStoriesPaths } from "slice-machine-ui/helpers/storybook";
 import smConfig from "./sm.json";
 
 export default defineNuxtConfig({
@@ -48,18 +47,13 @@ export default defineNuxtConfig({
     // https://go.nuxtjs.dev/eslint
     "@nuxtjs/eslint-module", // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
+    "nuxt-sm",
+    "@nuxtjs/prismic",
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
-    ["nuxt-sm"],
-    [
-      "@nuxtjs/prismic",
-      {
-        endpoint: smConfig.apiEndpoint || "",
-      },
-    ],
   ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -68,21 +62,15 @@ export default defineNuxtConfig({
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ["vue-slicezone", "nuxt-sm", "sm-commons"],
+    transpile: ["vue-slicezone", "nuxt-sm", "sm-commons", "prismic-dom"],
   },
   storybook: {
-    // This is a bug with `getStoriesPaths` and Nuxt that is awaiting to be fixed
     stories: [
-      ...getStoriesPaths().map((path) => path.replace("../", "~/")),
       "~/slices/**/*.stories.[tj]s",
-      "~/.slicemachine/assets/slices/**/*.stories.[tj]s",
+      "~/.slicemachine/**/*.stories.[tj]s",
     ],
   },
-  // This is a bug with `getStoriesPaths` and Nuxt that is awaiting to be fixed
-  ignore: [
-    ...getStoriesPaths().map((path) => path.replace("../", "~/")),
-    "**/*.stories.js",
-  ],
+  ignore: ["**/*.stories.js"],
   generate: {
     fallback: "404.html", // Netlify reads a 404.html, Nuxt will load as an SPA
   },
@@ -93,5 +81,11 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     viewer: false,
+    config: {
+      /* Extend the Tailwind config here */
+      purge: {
+        content: ["components/**/*.vue", "pages/**/*.vue", "slices/**/*.vue"],
+      },
+    },
   },
 });

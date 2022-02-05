@@ -62,7 +62,7 @@ export default defineNuxtConfig({
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ["vue-slicezone", "nuxt-sm", "sm-commons"],
+    transpile: ["vue-slicezone", "nuxt-sm", "sm-commons", "prismic-dom"],
   },
   storybook: {
     stories: [

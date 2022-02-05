@@ -98,5 +98,8 @@ sw.*
 # custom
 storybook-static
 .slicemachine
+!.slicemachine/libraries-state.json
+!.slicemachine/mock-config.json
+!.slicemachine/**/*.stories.js
 .nuxt-storybook
 .output
